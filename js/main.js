@@ -1,6 +1,6 @@
 const canvas = document.querySelector("#canvas"); // or .canvas if you made your canvas have a class of canvas
-canvas.width = window.innerHeight;
-canvas.height = window.innerHeight;
+canvas.width = $(window).width();
+canvas.height = $(window).height();
 canvas.style.width = canvas.width / 2 + "px";
 canvas.style.height = canvas.height / 2 + "px";
 const ctx = canvas.getContext("2d");
