@@ -14,9 +14,7 @@ setInterval(function(){
     ball.velocity.x -= parseFloat(document.getElementById("ballFriction").value);
   }else if(left == false && ball.velocity.x < 0){
     ball.velocity.x += parseFloat(document.getElementById("ballFriction").value);
-  }
-
-  if(ball.velocity.x < 0.9 && ball.velocity.x > -0.9){
+  }else if(ball.velocity.x < 0.9 && ball.velocity.x > -0.9){
     ball.velocity.x = 0;
   }
 
