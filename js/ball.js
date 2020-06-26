@@ -25,7 +25,7 @@ function Ball(x, y, radius, color){
   }
 
   this.move = function(){
-    if(this.x <= 0 || this.x >= canvas.width - this.radius){
+    if((this.x <= 0 && left == true) || (this.x >= canvas.width - this.radius && left == true)){
       this.velocity.x -= Math.round(this.velocity.x / 2);
       this.velocity.x *= -1;
     }
