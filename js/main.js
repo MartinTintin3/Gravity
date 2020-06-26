@@ -56,5 +56,5 @@ document.addEventListener('keyup', function(e) {
 });
 
 canvas.addEventListener('mousedown', e => {
-  ball.jump(30);
+  ball.jump(parseInt(document.getElementById("ballJumpHeight").value));
 });
