@@ -9,6 +9,7 @@ var left = false;
 var ball = new Ball(canvas.width / 2, canvas.height - 40, 40, "#000000");
 var speed = parseInt(document.getElementById("ballSpeed").value);
 
+
 setInterval(function(){
   speed = parseInt(document.getElementById("ballSpeed").value);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
