@@ -33,11 +33,11 @@ document.addEventListener('keydown', function(e) {
       break;
     case 39: case 68:
       right = true;
-      ball.velocity.x = parseInt(document.getElementById("ballSpead").value);
+      ball.velocity.x = parseInt(document.getElementById("ballSpeed").value);
       break;
     case 37: case 65:
       left = true;
-      ball.velocity.x = parseInt(document.getElementById("ballSpead").value) * -1;
+      ball.velocity.x = parseInt(document.getElementById("ballSpeed").value) * -1;
       break;
   }
 });
