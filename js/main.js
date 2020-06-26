@@ -7,7 +7,6 @@ const ctx = canvas.getContext("2d");
 var right = false;
 var left = false;
 var ball = new Ball(canvas.width / 2, canvas.height - 40, 40, "#000000");
-var speed = parseInt(document.getElementById("ballSpeed").value);
 
 
 setInterval(function(){
@@ -36,11 +35,11 @@ document.addEventListener('keydown', function(e) {
       break;
     case 39: case 68:
       right = true;
-      ball.velocity.x = speed
+      ball.velocity.x = parseInt(document.getElementById("ballSpeed").value);
       break;
     case 37: case 65:
       left = true;
-      ball.velocity.x = speed * -1
+      ball.velocity.x = parseInt(document.getElementById("ballSpeed").value) * -1;
       break;
   }
 });
