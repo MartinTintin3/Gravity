@@ -29,7 +29,7 @@ document.addEventListener('keydown', function(e) {
   switch (e.keyCode){
     case 38: case 32: case 87:
       if(ball.velocity.y == 0 && ball.floor == ball.y){
-        ball.jump(30);
+        ball.jump(parseInt(document.getElementById("ballJumpHeight").value));
         break;
       }
       break;
