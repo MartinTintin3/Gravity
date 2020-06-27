@@ -6,7 +6,7 @@ const ctx = canvas.getContext("2d");
 
 var right = false;
 var left = false;
-var ball = new Ball(canvas.width / 2, canvas.height - 40, 40, "#000000");
+var ball = new Ball(canvas.width / 2, canvas.height - 40, 40, "#FF0000");
 
 
 setInterval(function(){
