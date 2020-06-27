@@ -7,6 +7,7 @@ const ctx = canvas.getContext("2d");
 var right = false;
 var left = false;
 var ball = new Ball(canvas.width / 2, canvas.height - 40, 40, "#FF0000");
+var bounce = new Audio('Jump.wav');
 
 
 setInterval(function(){
@@ -30,6 +31,7 @@ document.addEventListener('keydown', function(e) {
     case 38: case 32: case 87:
       if(ball.velocity.y == 0 && ball.floor == ball.y){
         ball.jump(parseInt(document.getElementById("ballJumpHeight").value));
+        bounce.play()
         break;
       }
       break;
@@ -57,4 +59,5 @@ document.addEventListener('keyup', function(e) {
 
 canvas.addEventListener('mousedown', e => {
   ball.jump(parseInt(document.getElementById("ballJumpHeight").value));
+  bounce.play()
 });
