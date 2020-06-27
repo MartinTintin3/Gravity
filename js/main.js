@@ -61,6 +61,5 @@ canvas.addEventListener('mousedown', e => {
   if(ball.velocity.y == 0 && ball.floor == ball.y){
     ball.jump(parseInt(document.getElementById("ballJumpHeight").value));
     bounce.play()
-    break;
   }
 });
