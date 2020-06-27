@@ -12,9 +12,9 @@ var ball = new Ball(canvas.width / 2, canvas.height - 40, 40, "#FF0000");
 setInterval(function(){
   speed = parseInt(document.getElementById("ballSpeed").value);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  if(right == false && ball.velocity.x > 0 && ball.y < canvas.height - ball.radius){
+  if(right == false && ball.velocity.x > 0 && ball.y > canvas.height - ball.radius){
     ball.velocity.x -= parseFloat(document.getElementById("ballFriction").value);
-  }else if(left == false && ball.velocity.x < 0 && ball.y < canvas.height - ball.radius){
+  }else if(left == false && ball.velocity.x < 0 && ball.y > canvas.height - ball.radius){
     ball.velocity.x += parseFloat(document.getElementById("ballFriction").value);
   }else if(ball.velocity.x < 0.9 && ball.velocity.x > -0.9){
     ball.velocity.x = 0;
