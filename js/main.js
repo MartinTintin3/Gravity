@@ -14,7 +14,11 @@ var bounce = new Audio('Jump.wav');
 setInterval(function(){
   speed = parseInt(document.getElementById("ballSpeed").value);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  if(right == false && ball.velocity.x > 0 && ball.y >= canvas.height - ball.radius){
+  if(right == false && ball.velocity.x > 0 && ball.y < canvas.height - ball.radius){
+    ball.velocity.x -= Math.round(parseFloat(document.getElementById("ballFriction").value) / 2);
+  }else if(left == false && ball.velocity.x < 0 && ball.y < canvas.height - ball.radius){
+    ball.velocity.x += Math.round(parseFloat(document.getElementById("ballFriction").value) / 2);
+  }else if(right == false && ball.velocity.x > 0 && ball.y >= canvas.height - ball.radius){
     ball.velocity.x -= parseFloat(document.getElementById("ballFriction").value);
   }else if(left == false && ball.velocity.x < 0 && ball.y >= canvas.height - ball.radius){
     ball.velocity.x += parseFloat(document.getElementById("ballFriction").value);
