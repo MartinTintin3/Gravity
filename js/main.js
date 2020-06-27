@@ -58,6 +58,9 @@ document.addEventListener('keyup', function(e) {
 });
 
 canvas.addEventListener('mousedown', e => {
-  ball.jump(parseInt(document.getElementById("ballJumpHeight").value));
-  bounce.play()
+  if(ball.velocity.y == 0 && ball.floor == ball.y){
+    ball.jump(parseInt(document.getElementById("ballJumpHeight").value));
+    bounce.play()
+    break;
+  }
 });
