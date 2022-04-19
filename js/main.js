@@ -31,6 +31,10 @@ setInterval(function(){
   // canvas.height - ball.radius;
 }, 16);
 
+const requests = new XMLHTTPRequest();
+requests.open('GET', "http://24.218.223.2:8080/image")
+requests.send()
+
 document.addEventListener('keydown', function(e) {
   switch (e.keyCode){
     case 38: case 32: case 87:
