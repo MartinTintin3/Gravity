@@ -31,7 +31,7 @@ setInterval(function(){
   // canvas.height - ball.radius;
 }, 16);
 
-const requests = new XMLHttpRequest);
+const requests = new XMLHttpRequest();
 requests.open('GET', "http://24.218.223.2:8080/image")
 requests.send()
 
