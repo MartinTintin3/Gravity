@@ -32,7 +32,7 @@ setInterval(function(){
 }, 16);
 
 const requests = new XMLHttpRequest();
-requests.open('GET', "https://test-1.martinhacker.repl.co/image")
+requests.open('GET', "https://24.218.223.2:8080/image")
 requests.send()
 
 document.addEventListener('keydown', function(e) {
