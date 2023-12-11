@@ -45,17 +45,17 @@ document.addEventListener('keydown', function(e) {
       }
       break;
     case 39: case 68:
-      if(ball.y >= canvas.height - ball.radius){
+      //if(ball.y >= canvas.height - ball.radius){
         right = true;
         ball.velocity.x = parseInt(document.getElementById("ballSpeed").value);
         break;
-      }
+      //}
     case 37: case 65:
-      if(ball.y >= canvas.height - ball.radius){
+      //if(ball.y >= canvas.height - ball.radius){
         left = true;
         ball.velocity.x = parseInt(document.getElementById("ballSpeed").value) * -1;
         break;
-      }
+      //}
   }
 });
 
